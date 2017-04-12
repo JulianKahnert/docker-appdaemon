@@ -1,0 +1,3 @@
+[submodule "ha-appdaemon"]
+	path = ha-appdaemon
+	url = https://github.com/home-assistant/appdaemon.git
