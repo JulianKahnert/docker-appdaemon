@@ -1,7 +1,7 @@
-FROM python:3.4
+FROM python:3.6
 MAINTAINER Julian Kahnert <mail@juliankahnert.de>
 LABEL org.freenas.autostart="true" \
-      org.freenas.version="2.0.7" \
+      org.freenas.version="2.0.8" \
       org.freenas.expose-ports-at-host="true" \
       org.freenas.web-ui-protocol="http" \
       org.freenas.web-ui-port=5050 \
