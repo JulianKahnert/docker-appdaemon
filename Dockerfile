@@ -30,10 +30,9 @@ WORKDIR /usr/src/app
 VOLUME /conf
 
 # Copy source
-COPY ha-appdaemon .
+COPY haappdaemon .
 
 # INSTALL
 RUN pip3 install .
 
 CMD [ "appdaemon", "-c", "/conf" ]
-    
