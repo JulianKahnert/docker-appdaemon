@@ -13,9 +13,7 @@ tags_local += ['latest']
 tags_local += ['dev']
 tags_local = set(tags_local)
 
-if version in tags_local:
-    print('\nskipping "{}" - already exists\n'.format(version))
-else:
+if version not in tags_local:
     print('\nprocessing version: {}\n'.format(version))
 
     dockerfile = """
