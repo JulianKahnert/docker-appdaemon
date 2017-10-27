@@ -1,7 +1,7 @@
 
 FROM python:3.6
 MAINTAINER Julian Kahnert <mail@juliankahnert.de>
-LABEL org.freenas.version="2.1.10" \
+LABEL org.freenas.version="2.1.11" \
       org.freenas.upgradeable="true" \
       org.freenas.autostart="true" \
       org.freenas.web-ui-protocol="http" \
