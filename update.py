@@ -41,19 +41,21 @@ LABEL org.freenas.version="{}" \\
           }} \\
       ]"
 
+VOLUME /conf
+VOLUME /certs
 EXPOSE 5050
 
+# Copy appdaemon into image
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
-VOLUME /conf
+COPY haappdaemon/. .
 
-# Copy source
-COPY haappdaemon .
-
-# INSTALL
+# Install
 RUN pip3 install .
 
-CMD [ "appdaemon", "-c", "/conf" ]
+# Start script
+RUN chmod +x /usr/src/app/dockerStart.sh
+CMD [ "./dockerStart.sh" ]
     """.format(version)
     f = open('Dockerfile', 'w')
     f.write(dockerfile)
